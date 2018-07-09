@@ -13,7 +13,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        videoView.setVideoURI(Uri.parse("rtsp://ers.evostream.com:5544/stream2"))
+        videoView.setVideoURI(Uri.parse(resources.getString(R.string.videoURI)))
+
         videoView.setOnErrorListener({mediaPlayer: MediaPlayer, i: Int, i1: Int ->
             Log.d("MainActivity", "Error in MediaPlayer: $mediaPlayer")
         false})
