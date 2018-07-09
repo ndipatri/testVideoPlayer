@@ -13,6 +13,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Create a file in app/gradle.properties and provide this property:
+        // videoURI=XXX where XXX is a valid Video URI
         videoView.setVideoURI(Uri.parse(resources.getString(R.string.videoURI)))
 
         videoView.setOnErrorListener({mediaPlayer: MediaPlayer, i: Int, i1: Int ->
